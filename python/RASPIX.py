@@ -46,7 +46,7 @@ class Fotokadron9000(Frame):
         self.conn.retrieveFile('Photo',
                                'RASPIX/'+filename,
                                 image_file)
-        self.original = Image.open('17.jpg')
+        self.original = Image.open(image_file)
         self.original.load()
         image_file.close()
         self.i = (self.i + 1) % len(self.image_list)
